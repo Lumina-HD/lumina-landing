@@ -65,6 +65,15 @@
             font-weight: 800;
             color: var(--accent-cyan);
             letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-svg {
+            width: 32px;
+            height: 32px;
+            color: var(--accent-cyan);
         }
 
         .version-badge {
@@ -344,7 +353,14 @@
     <!-- Fejléc -->
     <header>
         <div class="logo-area">
-            <div class="logo-text">💎 LUMINA</div>
+            <div class="logo-text">
+                <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 10 L85 25 V50 C85 70 50 90 50 90 C50 90 15 70 15 50 V25 L50 10 Z" stroke="currentColor" stroke-width="6" fill="none"/>
+                    <path d="M30 50 Q38 35 45 50 T60 50 T70 50" stroke="#00f0ff" stroke-width="6" stroke-linecap="round" fill="none"/>
+                    <circle cx="50" cy="50" r="5" fill="currentColor"/>
+                </svg>
+                LUMINA
+            </div>
             <div class="version-badge">v1.0 HIVATALOS RELEASE</div>
         </div>
         <div class="company-info">
