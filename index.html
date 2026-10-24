@@ -26,6 +26,7 @@
             --border-color: #1f293d;
             --success-green: #00ff66;
             --warning-amber: #ffb703;
+            --discount-red: #ff4757;
         }
 
         * {
@@ -126,8 +127,20 @@
             color: var(--text-muted);
             font-size: 16px;
             max-width: 700px;
-            margin: 0 auto 30px auto;
+            margin: 0 auto 20px auto;
             line-height: 1.6;
+        }
+
+        .hero-promo-badge {
+            display: inline-block;
+            background: rgba(0, 240, 255, 0.1);
+            border: 1px solid var(--accent-cyan);
+            color: var(--accent-cyan);
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 10px;
         }
 
         /* Árazási szekció */
@@ -166,23 +179,55 @@
             text-transform: uppercase;
         }
 
+        .badge-discount {
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background-color: var(--discount-red);
+            color: white;
+            font-size: 11px;
+            font-weight: bold;
+            padding: 4px 12px;
+            border-radius: 12px;
+            text-transform: uppercase;
+        }
+
         .price-card h3 {
             color: var(--accent-cyan);
             font-size: 20px;
             margin-bottom: 5px;
         }
 
+        .original-price {
+            text-decoration: line-through;
+            color: var(--text-muted);
+            font-size: 18px;
+            margin-top: 10px;
+            font-weight: normal;
+        }
+
         .price-tag {
             font-size: 32px;
             font-weight: 800;
             color: var(--text-main);
-            margin: 15px 0 5px 0;
+            margin: 5px 0 5px 0;
+        }
+
+        .price-tag.discounted {
+            color: var(--success-green);
         }
 
         .price-tag span {
             font-size: 14px;
             color: var(--text-muted);
             font-weight: normal;
+        }
+
+        .promo-text-small {
+            font-size: 12px;
+            color: var(--accent-cyan);
+            font-weight: 600;
+            margin-bottom: 15px;
         }
 
         .price-features {
@@ -238,6 +283,34 @@
             text-align: center;
             margin-top: 8px;
             line-height: 1.3;
+        }
+
+        /* Kedvezmény Tájékoztató Doboz */
+        .discount-banner {
+            background: linear-gradient(90deg, rgba(112, 0, 255, 0.2) 0%, rgba(0, 240, 255, 0.2) 100%);
+            border: 1px solid var(--accent-cyan);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .discount-banner h4 {
+            color: var(--accent-cyan);
+            font-size: 18px;
+        }
+
+        .discount-banner p {
+            font-size: 14px;
+            color: var(--text-muted);
+            max-width: 800px;
+        }
+
+        .discount-banner strong {
+            color: var(--text-main);
         }
 
         /* Lépések Kártyák */
@@ -374,8 +447,15 @@
         
         <!-- Fő felhívás -->
         <div class="hero-card">
+            <div class="hero-promo-badge">🎁 PRÓBAIDŐSZAKI AKCIÓ</div>
             <h1>Magyar Nyelvű Hangvezérlés és <span>Biometrikus Biztonság</span></h1>
-            <p>Irányítsa számítógépét egyszerű beszédparancsokkal a Windows 10/11 rendszeren! Próbálja ki a teljes rendszert 14 napig mindössze 999 Ft-ért, vagy vásárolja meg az örökös licencet 23.990 Ft-ért.</p>
+            <p>Irányítsa számítógépét egyszerű beszédparancsokkal a Windows 10/11 rendszeren! Próbálja ki a teljes rendszert 14 napig mindössze 999 Ft-ért. <strong>Ha a próbaidő alatt dönt a végleges verzió mellett, a Pro licenchez 23.990 Ft helyett kedvezményesen, mindössze 18.990 Ft-ért juthat hozzá!</strong></p>
+        </div>
+
+        <!-- Próbaidőszaki kedvezményes kiemelő banner -->
+        <div class="discount-banner">
+            <h4>⚡ Próbaidőszaki Kedvezmény: Spóroljon 5.000 Ft-ot!</h4>
+            <p>Tesztelje a Luminát 14 napig 999 Ft-ért! Amennyiben a próbaidőszak lejárta előtt vásárolja meg az örökös licencet, a rendszer automatikusan a kedvezményes <strong>18.990 Ft-os árat</strong> biztosítja Önnek (23.990 Ft helyett).</p>
         </div>
 
         <!-- Árazási szekció -->
@@ -387,6 +467,7 @@
                     <h3>14 Napos Próbaidőszak</h3>
                     <p style="font-size: 13px; color: var(--text-muted);">Tesztelje a teljes rendszert elköteleződés nélkül</p>
                     <div class="price-tag">999 Ft <span>/ 14 nap</span></div>
+                    <div class="promo-text-small">✓ Jogosultság a 18.990 Ft-os Pro licenc árára!</div>
                     <ul class="price-features">
                         <li>Teljes hozzáférés 14 napon keresztül</li>
                         <li>Magyar nyelvű hangvezérlés</li>
@@ -403,13 +484,16 @@
                 </div>
             </div>
 
-            <!-- Pro Örökös Licenc (23.990 Ft - Kiemelt) -->
+            <!-- Pro Örökös Licenc (18.990 Ft / 23.990 Ft - Kiemelt) -->
             <div class="price-card featured">
+                <div class="badge-discount">-5.000 FT PRÓBAIDŐSZAKI ÁR</div>
                 <div class="badge-popular">Legnépszerűbb</div>
                 <div>
                     <h3>Lumina Pro Örökös Licenc</h3>
                     <p style="font-size: 13px; color: var(--text-muted);">Végleges használati jog rejtett költségek nélkül</p>
-                    <div class="price-tag">23.990 Ft <span>/ örökös</span></div>
+                    <div class="original-price">23.990 Ft helyett</div>
+                    <div class="price-tag discounted">18.990 Ft <span>/ örökös*</span></div>
+                    <div class="promo-text-small">*Próbaidőszaki kedvezményes ár</div>
                     <ul class="price-features">
                         <li>Örökös használati jog 1 PC-re</li>
                         <li>Teljes biometrikus hangazonosítás</li>
@@ -419,8 +503,8 @@
                     </ul>
                 </div>
                 <div>
-                    <a href="https://buy.stripe.com/LIFETIME_LINK_23990" class="buy-btn" target="_blank">
-                        Örökös Licenc Megrendelése (23.990 Ft)
+                    <a href="https://buy.stripe.com/PROMO_LIFETIME_LINK_18990" class="buy-btn" target="_blank">
+                        Örökös Licenc Megrendelése (18.990 Ft)
                     </a>
                     <div class="payment-notice">⚠️ Fizetési kötelezettséggel járó megrendelés</div>
                 </div>
@@ -460,7 +544,7 @@
                     <div class="step-item">
                         <div class="step-number">1</div>
                         <div class="step-text">
-                            <strong>Válassza ki a licencet:</strong> Rendelje meg a 14 napos próbaidőszakot (999 Ft) vagy a végleges örökös licencet.
+                            <strong>Válassza ki a licencet:</strong> Rendelje meg a 14 napos próbaidőszakot (999 Ft) vagy a kedvezményes örökös licencet.
                         </div>
                     </div>
                     <div class="step-item">
