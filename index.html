@@ -1,70 +1,10 @@
-<!DOCTYPE html>
-<html lang="hu">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lumina Hangvezérlő Rendszer</title>
-    
-    <!-- Favicon / Böngésző fül ikon (Javított fájlnévvel) -->
-    <link rel="icon" type="image/png" href="lumina_logo.png">
-
-    <!-- SEO Meta Leírás és Kulcsszavak -->
-    <meta name="description" content="Fedezza fel a Luminát: 100%-ban magyar nyelvű hangvezérlő és biometrikus biztonsági szoftver Windows 10/11 rendszerekre. Irányítsa a számítógépét beszéddel!" />
-    <meta name="keywords" content="magyar nyelvű hangvezérlés, számítógép irányítás beszéddel, biometrikus hangazonosítás, Windows hangvezérlő szoftver, Lumina hangvezérlő, hangvezérlő, hangazonosítás, lumina, lumina hangvezérlő, Lumina, alkalmazáskezelő, lumina alkalmazáskezelő, Lumina alkalmazáskezelő, hangvezérlés magyarul, magyar hangvezérlés" />
-
-    <!-- Open Graph / Facebook / LinkedIn megosztási leírás -->
-    <meta property="og:title" content="Lumina - Magyar Nyelvű Hangvezérlő és Biztonsági Rendszer" />
-    <meta property="og:description" content="Irányítsa a számítógépét magyar hangvezérléssel! Biztonságos biometrikus hangazonosítás és zökkenőmentes programkezelés Windows 10/11 rendszereken." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://lumina-hangvezerlo.netlify.app/" />
-    <meta name="google-site-verification" content="O-KwUKK0OftyIPZ4zt2fslqInRu_SWgqPWUhvvDwaa4" />
-    <style>
-        :root {
-            --bg-color: #0b0e14;
-            --card-bg: #12161f;
-            --card-hover: #1a202c;
-            --accent-cyan: #00f0ff;
-            --accent-purple: #7000ff;
-            --text-main: #ffffff;
-            --text-muted: #8892b0;
-            --border-color: #1f293d;
-            --success-green: #00ff66;
-            --warning-amber: #ffb703;
-            --discount-red: #ff4757;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        /* Fejléc */
-        header {
-            background-color: var(--card-bg);
-            border-bottom: 1px solid var(--border-color);
-            padding: 20px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
 <!-- Favicon / Böngésző fül ikon beállítások -->
 <link rel="icon" type="image/x-icon" href="flavicon.ico">
 <link rel="shortcut icon" type="image/x-icon" href="flavicon.ico">
 <link rel="apple-touch-icon" href="flavicon.ico">
 
 <!-- SEO Meta Leírás és Kulcsszavak -->
-<meta name="description" content="Fedezza fel a Luminát: 100%-ban magyar nyelvű hangvezérlő és biometrikus biztonsági szoftver Windows 10/11 rendszerekre. Irányítsa a számítógépét beszéddel!" />
+<meta name="description" content="Fedezze fel a Luminát: 100%-ban magyar nyelvű hangvezérlő és biometrikus biztonsági szoftver Windows 10/11 rendszerekre. Irányítsa a számítógépét beszéddel!" />
 <meta name="keywords" content="magyar nyelvű hangvezérlés, számítógép irányítás beszéddel, biometrikus hangazonosítás, Windows hangvezérlő szoftver, Lumina hangvezérlő, hangvezérlő, hangazonosítás, lumina, lumina hangvezérlő, Lumina, alkalmazáskezelő, lumina alkalmazáskezelő, Lumina alkalmazáskezelő, hangvezérlés magyarul, magyar hangvezérlés" />
 
 <!-- Open Graph / Facebook / LinkedIn megosztási leírás -->
@@ -153,7 +93,7 @@
 
     /* Fő konténer */
     .container {
-        max-width: 1100px;
+        max-width: 1200px;
         margin: 40px auto;
         padding: 0 20px;
         flex: 1;
@@ -185,7 +125,7 @@
     .hero-card p {
         color: var(--text-muted);
         font-size: 16px;
-        max-width: 700px;
+        max-width: 750px;
         margin: 0 auto 20px auto;
         line-height: 1.6;
     }
@@ -202,10 +142,10 @@
         margin-bottom: 10px;
     }
 
-    /* Árazási szekció */
+    /* Árazási szekció (4 kártyás elrendezés) */
     .pricing-section {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
         gap: 20px;
     }
 
@@ -213,7 +153,7 @@
         background-color: var(--card-bg);
         border: 1px solid var(--border-color);
         border-radius: 12px;
-        padding: 30px;
+        padding: 28px 22px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -228,12 +168,12 @@
     .badge-popular {
         position: absolute;
         top: -12px;
-        right: 20px;
+        right: 15px;
         background-color: var(--accent-purple);
         color: white;
-        font-size: 11px;
+        font-size: 10px;
         font-weight: bold;
-        padding: 4px 12px;
+        padding: 4px 10px;
         border-radius: 12px;
         text-transform: uppercase;
     }
@@ -241,35 +181,35 @@
     .badge-discount {
         position: absolute;
         top: -12px;
-        left: 20px;
+        left: 15px;
         background-color: var(--discount-red);
         color: white;
-        font-size: 11px;
+        font-size: 10px;
         font-weight: bold;
-        padding: 4px 12px;
+        padding: 4px 10px;
         border-radius: 12px;
         text-transform: uppercase;
     }
 
     .price-card h3 {
         color: var(--accent-cyan);
-        font-size: 20px;
+        font-size: 19px;
         margin-bottom: 5px;
     }
 
     .original-price {
         text-decoration: line-through;
         color: var(--text-muted);
-        font-size: 18px;
-        margin-top: 10px;
+        font-size: 16px;
+        margin-top: 8px;
         font-weight: normal;
     }
 
     .price-tag {
-        font-size: 32px;
+        font-size: 28px;
         font-weight: 800;
         color: var(--text-main);
-        margin: 5px 0 5px 0;
+        margin: 5px 0;
     }
 
     .price-tag.discounted {
@@ -277,25 +217,25 @@
     }
 
     .price-tag span {
-        font-size: 14px;
+        font-size: 13px;
         color: var(--text-muted);
         font-weight: normal;
     }
 
     .promo-text-small {
-        font-size: 12px;
+        font-size: 11px;
         color: var(--accent-cyan);
         font-weight: 600;
-        margin-bottom: 15px;
+        margin-bottom: 12px;
     }
 
     .price-features {
         list-style: none;
-        margin: 15px 0 25px 0;
+        margin: 15px 0 20px 0;
         display: flex;
         flex-direction: column;
         gap: 10px;
-        font-size: 14px;
+        font-size: 13px;
         color: var(--text-muted);
     }
 
@@ -308,9 +248,9 @@
     .buy-btn {
         background-color: var(--accent-cyan);
         color: #0b0e14;
-        font-size: 15px;
+        font-size: 14px;
         font-weight: bold;
-        padding: 12px 20px;
+        padding: 12px 16px;
         border: none;
         border-radius: 8px;
         cursor: pointer;
@@ -365,7 +305,7 @@
     .discount-banner p {
         font-size: 14px;
         color: var(--text-muted);
-        max-width: 800px;
+        max-width: 850px;
     }
 
     .discount-banner strong {
@@ -465,8 +405,14 @@
         color: var(--accent-cyan);
     }
 
-    @media (max-width: 768px) {
-        .grid-section {
+    @media (max-width: 900px) {
+        .pricing-section {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .pricing-section, .grid-section {
             grid-template-columns: 1fr;
         }
         header {
@@ -505,75 +451,99 @@
     
     <!-- Fő felhívás -->
     <div class="hero-card">
-        <div class="hero-promo-badge">🎁 PRÓBAIDŐSZAKI AKCIÓ</div>
+        <div class="hero-promo-badge">🎁 PRÓBAIDŐSZAKI KEDVEZMÉNY</div>
         <h1>Magyar Nyelvű Hangvezérlés és <span>Biometrikus Biztonság</span></h1>
-        <p>Irányítsa számítógépét egyszerű beszédparancsokkal a Windows 10/11 rendszeren! Próbálja ki a teljes rendszert 14 napig mindössze 999 Ft-ért. <strong>Ha a próbaidő alatt dönt a végleges verzió mellett, a Pro licenchez 23.990 Ft helyett kedvezményesen, mindössze 18.990 Ft-ért juthat hozzá!</strong></p>
+        <p>Irányítsa számítógépét egyszerű beszédparancsokkal a Windows 10/11 rendszeren! Vásárolja meg közvetlenül a végleges licenccsel rendelkező szoftvert, vagy próbálja ki 14 napig mindössze 999 Ft-ért. <strong>A próbaidő alatt álló felhasználók számára a Pro licenc kedvezményesen, 23.990 Ft helyett 18.990 Ft-ért érhető el!</strong></p>
     </div>
 
     <!-- Próbaidőszaki kedvezményes kiemelő banner -->
     <div class="discount-banner">
         <h4>⚡ Próbaidőszaki Kedvezmény: Spóroljon 5.000 Ft-ot!</h4>
-        <p>Tesztelje a Luminát 14 napig 999 Ft-ért! Amennyiben a próbaidőszak lejárta előtt vásárolja meg az örökös licencet, a rendszer automatikusan a kedvezményes <strong>18.990 Ft-os árat</strong> biztosítja Önnek (23.990 Ft helyett).</p>
+        <p>Válassza a 14 napos próbaidőszakot 999 Ft-ért, és a szoftveren belül vagy az aktív próbaidő alatt garantáljuk az exkluzív <strong>18.990 Ft-os kedvezményes árat</strong> az örökös licenc megvásárlásához (az eredeti 23.990 Ft helyett).</p>
     </div>
 
     <!-- Árazási szekció -->
     <div class="pricing-section" id="megrendeles">
         
-        <!-- 14 napos Próbaidő (999 Ft) -->
+        <!-- 1. 14 napos Próbaidő (999 Ft) -->
         <div class="price-card">
             <div>
                 <h3>14 Napos Próbaidőszak</h3>
-                <p style="font-size: 13px; color: var(--text-muted);">Tesztelje a teljes rendszert elköteleződés nélkül</p>
+                <p style="font-size: 12px; color: var(--text-muted);">Tesztelje a teljes rendszert kockázat nélkül</p>
                 <div class="price-tag">999 Ft <span>/ 14 nap</span></div>
-                <div class="promo-text-small">✓ Jogosultság a 18.990 Ft-os Pro licenc árára!</div>
+                <div class="promo-text-small">✓ 14 napos jogosultság a 18.990 Ft-os ágra</div>
                 <ul class="price-features">
-                    <li>Teljes hozzáférés 14 napon keresztül</li>
+                    <li>Teljes hozzáférés 14 napig</li>
                     <li>Magyar nyelvű hangvezérlés</li>
-                    <li>10 mp / 5 mp MFCC Biometrikus hangazonosítás</li>
-                    <li>Automatikus fizikai mikrofon szűrés</li>
+                    <li>MFCC Biometrikus hangazonosítás</li>
+                    <li>Automatikus mikrofon szűrés</li>
                     <li>Ablakkezelés és médialejátszás</li>
                 </ul>
             </div>
             <div>
                 <a href="https://buy.stripe.com/TRIAL_LINK_999" class="buy-btn secondary" target="_blank">
-                    Próbaidőszak Megrendelése (999 Ft)
+                    Próbaidőszak (999 Ft)
                 </a>
                 <div class="payment-notice">⚠️ Fizetési kötelezettséggel járó megrendelés</div>
             </div>
         </div>
 
-        <!-- Pro Örökös Licenc (18.990 Ft / 23.990 Ft - Kiemelt) -->
+        <!-- 2. Kedvezményes Licenc (Próbaidősöknek - 18.990 Ft) -->
         <div class="price-card featured">
-            <div class="badge-discount">-5.000 FT PRÓBAIDŐSZAKI ÁR</div>
-            <div class="badge-popular">Legnépszerűbb</div>
+            <div class="badge-discount">-5.000 FT KEDVEZMÉNY</div>
+            <div class="badge-popular">Próbaidős Ár</div>
             <div>
-                <h3>Lumina Pro Örökös Licenc</h3>
-                <p style="font-size: 13px; color: var(--text-muted);">Végleges használati jog rejtett költségek nélkül</p>
+                <h3>Kedvezményes Pro Licenc</h3>
+                <p style="font-size: 12px; color: var(--text-muted);">Kizárólag aktív próbaidőszakkal rendelkezőknek</p>
                 <div class="original-price">23.990 Ft helyett</div>
-                <div class="price-tag discounted">18.990 Ft <span>/ örökös*</span></div>
-                <div class="promo-text-small">*Próbaidőszaki kedvezményes ár</div>
+                <div class="price-tag discounted">18.990 Ft <span>/ örökös</span></div>
+                <div class="promo-text-small">*Csak a 14 napos próbaidő alatt vásárolható meg</div>
                 <ul class="price-features">
                     <li>Örökös használati jog 1 PC-re</li>
-                    <li>Teljes biometrikus hangazonosítás</li>
-                    <li>Automatikus fizikai mikrofon szűrés</li>
+                    <li>Teljes biometrikus védelmi modul</li>
+                    <li>Automatikus mikrofon szűrés</li>
                     <li>Önálló tálca- és ablakkezelés</li>
-                    <li>Prioritásos, ingyenes frissítések</li>
+                    <li>Ingyenes frissítések</li>
                 </ul>
             </div>
             <div>
                 <a href="https://buy.stripe.com/PROMO_LIFETIME_LINK_18990" class="buy-btn" target="_blank">
-                    Örökös Licenc Megrendelése (18.990 Ft)
+                    Kedvezményes Licenc (18.990 Ft)
+                </a>
+                <div class="payment-notice">⚠️ Kizárólag aktív próbaidő alatt érvényes!</div>
+            </div>
+        </div>
+
+        <!-- 3. Standard Örökös Licenc (23.990 Ft - Normál ár) -->
+        <div class="price-card">
+            <div>
+                <h3>Standard Örökös Licenc</h3>
+                <p style="font-size: 12px; color: var(--text-muted);">Közvetlen vásárlás próbaidőszak nélkül</p>
+                <div class="price-tag">23.990 Ft <span>/ örökös</span></div>
+                <div class="promo-text-small">Azonnali teljes elérés</div>
+                <ul class="price-features">
+                    <li>Azonnali végleges hozzáférés 1 PC-re</li>
+                    <li>Teljes biometrikus hangazonosítás</li>
+                    <li>Nem szükséges próbaidőszak</li>
+                    <li>Prioritásos frissítések</li>
+                    <li>Minden funkció azonnal elérhető</li>
+                </ul>
+            </div>
+            <div>
+                <a href="https://buy.stripe.com/STANDARD_LIFETIME_LINK_23990" class="buy-btn secondary" target="_blank">
+                    Standard Licenc (23.990 Ft)
                 </a>
                 <div class="payment-notice">⚠️ Fizetési kötelezettséggel járó megrendelés</div>
             </div>
         </div>
 
-        <!-- Céges csomag -->
+        <!-- 4. Céges csomag (149.000 Ft) -->
         <div class="price-card">
             <div>
                 <h3>Céges / Pro Licenc</h3>
-                <p style="font-size: 13px; color: var(--text-muted);">Vállalati és akadálymentesítési csomag</p>
+                <p style="font-size: 12px; color: var(--text-muted);">Vállalati és akadálymentesítési csomag</p>
                 <div class="price-tag">149.000 Ft <span>/ csomag</span></div>
+                <div class="promo-text-small">Többgépes vállalati licenc</div>
                 <ul class="price-features">
                     <li>Többgépes licencelési lehetőség</li>
                     <li>Prioritásos technikai támogatás</li>
@@ -602,7 +572,7 @@
                 <div class="step-item">
                     <div class="step-number">1</div>
                     <div class="step-text">
-                        <strong>Válassza ki a licencet:</strong> Rendelje meg a 14 napos próbaidőszakot (999 Ft) vagy a kedvezményes örökös licencet.
+                        <strong>Válassza ki a licencet:</strong> Rendelje meg a 14 napos próbaidőszakot (999 Ft) a kedvezményes árért, vagy vásárolja meg közvetlenül a Standard Licencet (23.990 Ft).
                     </div>
                 </div>
                 <div class="step-item">
@@ -650,29 +620,3 @@
     <div>Székhely: 6800 Hódmezővásárhely, Móricz Zs. u. 71. &nbsp;|&nbsp; Cégjegyzékszám: 06-09-011051 &nbsp;|&nbsp; Adószám: 13875949-1-06</div>
     <div>Ügyfélszolgálat & Kapcsolat: <span>hegyi.daniel.lumena@gmail.com</span></div>
 </footer>
-
-        .logo-area {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .logo-text {
-            font-size: 22px;
-            font-weight: 800;
-            color: var(--accent-cyan);
-            letter-spacing: 2px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .logo-svg {
-            width: 32px;
-            height: 32px;
-            color: var(--accent-cyan);
-        }
-
-        .version-badge {
-            background
-</html>
